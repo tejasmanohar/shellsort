@@ -5,8 +5,10 @@ function comparator(a, b) {
 /**
 * Shellsort
 * @public
-* @param {array} array Array which should be sorted
-* @return {array} Sorted array
+* @param {Array} input array
+* @param {Array} gap values
+* @param {Function} comparator
+* @return {Array} Sorted array
 */
 
 module.exports = function (arr, gaps, cmp) {
@@ -14,13 +16,13 @@ module.exports = function (arr, gaps, cmp) {
   var gap, current;
   for (var k = 0; k < gaps.length; k += 1) {
     gap = gaps[k];
-    for (var i = gap; i < array.length; i += gap) {
-      current = array[i];
-      for (var j = i; j >= gap && cmp(array[j - gap], current) > 0; j -= gap) {
-        array[j] = array[j - gap];
+    for (var i = gap; i < arr.length; i += gap) {
+      current = arr[i];
+      for (var j = i; j >= gap && cmp(arr[j - gap], current) > 0; j -= gap) {
+        arr[j] = arr[j - gap];
       }
-      array[j] = current;
+      arr[j] = current;
     }
   }
-  return array;
+  return arr;
 };
