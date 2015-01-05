@@ -10,7 +10,7 @@ function comparator(a, b) {
 */
 
 module.exports = function (arr, gaps, cmp) {
-  cmp = cmp || compare;
+  cmp = cmp || comparator;
   var gap, current;
   for (var k = 0; k < gaps.length; k += 1) {
     gap = gaps[k];
