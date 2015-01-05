@@ -1,27 +1,26 @@
-'use strict';
+function comparator(a, b) {
+  return a - b;
+}
 
 /**
- * Bubble Sort with O(n^2) complexity
- * @param {Array} input array
- * @returns {Array} shell sorted array
+* Shellsort
+* @public
+* @param {array} array Array which should be sorted
+* @return {array} Sorted array
 */
 
-module.exports = function(arr) {
-  var h = 1;
-  while (h < arr.length / 3) {
-    h = 3 * h + 1;
-  }
-
-  while (h > 0) {
-    for (var i = h; i < arr.length; i += h) {
-      for (var n = i; n > 0 && arr[n] < arr[n-h]; n -= h) {
-        var arr = arr[n];
-        arr[n] = arr[n-h];
-        arr[n-h] = arr;
+module.exports = function (arr, gaps, cmp) {
+  cmp = cmp || compare;
+  var gap, current;
+  for (var k = 0; k < gaps.length; k += 1) {
+    gap = gaps[k];
+    for (var i = gap; i < array.length; i += gap) {
+      current = array[i];
+      for (var j = i; j >= gap && cmp(array[j - gap], current) > 0; j -= gap) {
+        array[j] = array[j - gap];
       }
+      array[j] = current;
     }
-    h = --h / 3;
   }
-
-  return arr;
+  return array;
 };
