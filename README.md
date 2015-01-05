@@ -1,8 +1,8 @@
 #  [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-url]][daviddm-image]
 
-> Shell Sort
+> Shellsort
 
-[Shell Sort](http://en.wikipedia.org/wiki/Shellsort) implementation wth O(n^3/2) complexity based on [JavaScript Algorithms](https://github.com/mgechev/javascript-algorithms).
+[Shellsort](http://en.wikipedia.org/wiki/Shellsort) implementation wth O(n^3/2) complexity based on [JavaScript Algorithms](https://github.com/mgechev/javascript-algorithms).
 
 > Shellsort, also known as Shell sort or Shell's method, is an in-place comparison sort. It can be seen as either a generalization of sorting by exchange (bubble sort) or sorting by insertion (insertion sort).[1] The method starts by sorting pairs of elements far apart from each other, then progressively reducing the gap between elements to be compared.
 
