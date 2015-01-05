@@ -1,3 +1,4 @@
+/*global describe, it */
 var assert = require('assert');
 var shellsort = require('../');
 var gaps = [3, 5, 1, 6, 23, 20, 8, 34];
@@ -39,7 +40,7 @@ function objComparator(a, b) {
 }
 describe('shellsort node module', function() {
     it('should work with empty arrays', function() {
-        assert.deepEqual(shellsort([]), gaps, []);
+        assert.deepEqual(shellsort([], []), []);
     });
     it('should work with (ascending) sorted arrays', function() {
         assert.deepEqual(shellsort([3, 1, 4, 1, 5, 9, 2, 6, 5, 4], gaps), [1, 1, 2, 3, 4, 4, 5, 5, 6, 9]);
