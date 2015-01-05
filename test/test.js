@@ -1,6 +1,6 @@
 var assert = require('assert');
 var shellsort = require('../');
-var gaps = [701, 301, 132, 57, 23, 10, 4, 1];
+var gaps = [3, 5, 1, 6, 23, 20, 8, 34];
 var people = [{
     name: 'Sindre',
     age: 30,
